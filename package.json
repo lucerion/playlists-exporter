@@ -1,0 +1,16 @@
+{
+  "name": "playlists-exporter",
+  "version": "0.0.1",
+  "description": "Music streaming platforms playlists exporter",
+  "repository": "https://github.com/lucerion/playlists-exporter",
+  "license": "BSD-3-Clause",
+  "author": "Alexander Skachko <alexander.skachko@gmail.com>",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "eslint": "^5.16.0"
+  }
+}
