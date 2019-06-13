@@ -10,6 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "js-yaml": "^3.13.1",
+    "yandex-music-api": "^0.0.3"
+  },
+  "devDependencies": {
     "dotenv": "^6.2.0",
     "eslint": "^5.16.0"
   }
