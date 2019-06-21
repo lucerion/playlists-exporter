@@ -1,7 +1,7 @@
 const client = require("./client");
 const mapper = require("./mapper")
 
-const all = async () => {
+const byPlaylists = async () => {
   await client.init();
 
   const playlists = await client.playlists();
@@ -17,4 +17,4 @@ const playlistsWithTracks = async (playlists) => {
   return playlistsWithTracks;
 }
 
-module.exports = { all };
+module.exports = { byPlaylists };
