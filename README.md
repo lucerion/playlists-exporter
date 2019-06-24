@@ -10,9 +10,6 @@ Music streaming platforms playlists exporter
 
 ## Usage
 
-    yarn start
+  * Copy `.env.example` to `.env`. Edit `.env` (how to get a vk token see [here](https://github.com/vodka2/vk-audio-token))
 
-
-## Linter
-
-    yarn lint
+  * Run `yarn yandex` or `yarn vk` or `yarn start` (all exporters)

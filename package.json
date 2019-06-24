@@ -6,7 +6,9 @@
   "license": "BSD-3-Clause",
   "author": "Alexander Skachko <alexander.skachko@gmail.com>",
   "scripts": {
-    "start": "node src/index.js",
+    "yandex": "node src/yandex/index.js",
+    "vk": "node src/vk/index.js",
+    "start": "yarn yandex && yarn vk",
     "lint": "eslint ."
   },
   "dependencies": {
