@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const client = require("./client");
 const mapper = require("./mapper");
-const exporter = require("../exporter");
+const utils = require("../utils");
 
 const allTracks = async () => {
   const data = await client.tracks();
@@ -13,7 +13,7 @@ const allTracks = async () => {
 module.exports = (async function() {
   const tracks = await allTracks();
 
-  exporter.saveYAML(tracks, {
+  utils.saveYAML(tracks, {
     dir: process.env.VK_EXPORT_DIR,
     filename: process.env.VK_EXPORT_FILENAME
   });
