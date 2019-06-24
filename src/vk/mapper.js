@@ -1,7 +1,7 @@
 const tracksMapper = (tracks) => tracks.map((track) => trackMapper(track));
 const trackMapper = ({ title, artist }) => ({
-  title: title,
   artist: artist,
+  title: title,
 });
 
 module.exports = { tracksMapper };

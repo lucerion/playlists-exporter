@@ -6,11 +6,10 @@ const playlistMapper = ({ title }, tracks) => ({
 
 const tracksMapper = (tracks) => tracks.map((track) => trackMapper(track));
 const trackMapper = ({ track: { title, artists } }) => ({
-  title: title,
   artist: artistsMapper(artists),
+  title: title,
 });
 
-const artistsMapper = (artists) => artists.map((artist) => artistMapper(artist)).join(", ");
-const artistMapper = (artist) => artist.name;
+const artistsMapper = (artists) => artists.map(({ name }) => name).join(", ");
 
 module.exports = { playlistsMapper };
