@@ -1,8 +1,8 @@
-require("dotenv").config();
+require('dotenv').config();
 
-const client = require("./client");
-const mapper = require("./mapper")
-const utils = require("../utils");
+const client = require('./client');
+const mapper = require('./mapper');
+const utils = require('../utils');
 
 const byPlaylists = async () => {
   await client.init();
@@ -25,6 +25,6 @@ module.exports = (async function() {
 
   utils.saveYAML(tracks, {
     dir: process.env.YANDEX_MUSIC_EXPORT_DIR,
-    filename: process.env.YANDEX_MUSIC_EXPORT_FILENAME
+    filename: process.env.YANDEX_MUSIC_EXPORT_FILENAME,
   });
 })();

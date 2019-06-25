@@ -1,4 +1,4 @@
-const YandexMusicAPI = require("yandex-music-api");
+const YandexMusicAPI = require('yandex-music-api');
 const API = new YandexMusicAPI();
 
 const config = {

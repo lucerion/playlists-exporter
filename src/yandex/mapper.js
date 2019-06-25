@@ -10,6 +10,6 @@ const trackMapper = ({ track: { title, artists } }) => ({
   title: title,
 });
 
-const artistsMapper = (artists) => artists.map(({ name }) => name).join(", ");
+const artistsMapper = (artists) => artists.map(({ name }) => name).join(', ');
 
 module.exports = { playlistsMapper };

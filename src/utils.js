@@ -1,15 +1,15 @@
-const https = require("https");
-const yaml = require("js-yaml");
-const fs = require("fs");
+const https = require('https');
+const yaml = require('js-yaml');
+const fs = require('fs');
 
 const request = (options) => {
   return new Promise((resolve, reject) => {
     const request = https.get(options, response => {
       let body = [];
 
-      response.on("data", chunk => body.push(chunk));
+      response.on('data', chunk => body.push(chunk));
 
-      response.on("end", () => {
+      response.on('end', () => {
         try {
           const buffer = Buffer.concat(body);
           body = JSON.parse(buffer.toString());
@@ -22,7 +22,7 @@ const request = (options) => {
       });
     });
 
-    request.on("error", error => reject(error));
+    request.on('error', error => reject(error));
   });
 };
 
@@ -42,8 +42,8 @@ const saveFile = (path, data) => {
 
 const formatFilename = (filename) => {
   // date in format %Y%m%d%H%M%S
-  const timestamp = new Date().toISOString().slice(0, -5).replace(/-|T|:/g, "");
-  return filename.replace("{timestamp}", timestamp);
+  const timestamp = new Date().toISOString().slice(0, -5).replace(/-|T|:/g, '');
+  return filename.replace('{timestamp}', timestamp);
 };
 
 module.exports = { request, saveYAML };
