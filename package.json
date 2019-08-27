@@ -16,10 +16,7 @@
     "yandex-music-api": "^0.0.3"
   },
   "devDependencies": {
-    "dotenv": "^8.0.0",
-    "eslint": "^6.0.1"
-  },
-  "resolutions": {
-    "lodash": "^4.17.13"
+    "dotenv": "^8.1.0",
+    "eslint": "^6.2.2"
   }
 }
