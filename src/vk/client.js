@@ -1,4 +1,4 @@
-const utils = require('../utils');
+const httpUtils = require('../utils/http');
 
 const VK_API_VERSION = 5.78;
 
@@ -10,6 +10,10 @@ const REQUEST_OPTIONS = {
   },
 };
 
-const tracks = () => utils.request(REQUEST_OPTIONS);
+const getTracks = async () => {
+  const data = await httpUtils.request(REQUEST_OPTIONS);
 
-module.exports = { tracks };
+  return data.response.items;
+};
+
+module.exports = { getTracks };
